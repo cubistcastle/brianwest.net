@@ -4,9 +4,13 @@
 @import "base";
 @include border-box-sizing;
 @import "compass/css3";
+@import "vars";
 // @include susy-grid-background
 /* -------------------------------------------------------------------------*/
-/* some basics */
+// ===================================================
+// ## 1. global basics
+// ===================================================
+// just a few styling defaults for the page at large
 
 body {
     font-family: "freight-sans-pro", "Arial", sans-serif;
@@ -19,43 +23,15 @@ img {
 }
 
 a {
-    color:rgba(211, 114, 92, 1.0000);
-}
-.intro-section { 
-    background:rgba(149, 186, 161, 1.0000);
-    color:white;
-    padding:5em 0;
-    text-align:center; 
-    p {
-        // padding:2em 0;
-        font-size:2.5em;
-    }
+    color:$rust;
 }
 
-.more-info {
-    padding-bottom: 3em;
-}
+// ===================================================
+// ## 2. Layout
+// ===================================================
+// setting up the basic containers with susy with 
+// a breakpoint for larger screens
 
-.more-info-section {
-    background:rgba(235, 233, 227, 1);
-    padding:3em 0;
-}
-
-.examples-section {
-    background:rgba(211, 114, 92, 1.0000);
-    padding-top:3em;
-    padding-bottom:3em;
-    color:white;
-}
-
-.contact-section {
-    background: rgba(55, 61, 61, 1.0000);
-    padding-top:3em;
-    padding-bottom:3em;
-    color:white;
-}
-
-/* layout */
 .intro,
 .more-info,
 .examples,
@@ -68,8 +44,125 @@ a {
     }
 }
 
+// ===================================================
+// ## 3. Section Styles
+// ===================================================
+// Each section is a bit different. Here are the styles
+// this could all be modularized a bit more
 
-/* item block base styling */
+// ## intro section
+// ===================================================
+
+.intro-section { 
+    background:$green;
+    color:white;
+    padding:5em 0;
+    text-align:center; 
+    p {
+        // padding:2em 0;
+        font-size:2.5em;
+    }
+}
+.herewego {
+    background:white;
+    display:inline-block;
+    padding:1em;
+    margin-top:2em;
+    color:$green;
+    font-size:1.75em;
+    text-decoration: none;
+    border-radius: 4px;
+    @include transition-property(all);
+    @include transition-duration(.2s);
+    @include transition-timing-function(ease-in);
+    &:hover {
+        background:darken(white, 10%);
+    }
+}
+
+// ## more information
+// ===================================================
+
+.more-info {
+    padding-bottom: 3em;
+}
+
+.more-info-section {
+    background:$cream;
+    padding:3em 0;
+}
+
+.a-little-more {
+    position:relative;
+    padding-top:5em;
+    font-size:1.25em;
+    line-height: 1.762em;
+    &::before {
+        background:url("../images/bw2.jpg");
+        background-size:cover;
+        margin:0 auto;
+        height:100px;
+        width:100px;
+        left:35%;
+        top:-1.15em;
+
+        border-radius:50px;
+        content:"";
+        position:absolute;
+    }
+}
+
+.more-info__header {
+    color:$charcoal;
+    text-align: center;
+    font-weight: 300;
+    font-size:3em;
+    position:relative;
+
+    span {
+        position: relative;
+        z-index: 100;
+        padding: 0 10px;
+        border-bottom:1px solid rgba(55, 61, 61, 0.2);
+        // background:$rust;
+    }
+}
+
+// ## work examples
+// ===================================================
+
+.examples-section {
+    background:$rust;
+    padding-top:3em;
+    padding-bottom:3em;
+    color:white;
+}
+
+.work-header {
+    color:white;
+    text-align: center;
+    font-weight: 300;
+    font-size:3em;
+    position:relative;
+    span {
+        position: relative;
+        z-index: 100;
+        padding: 0 10px;
+        border-bottom:1px solid rgba(55, 61, 61, 0.2);
+    }
+}
+
+.work-description {
+    color:$charcoal;
+    text-align:center;
+    max-width:480px;
+    margin:2em auto;
+    position: relative;
+}
+
+// -----------
+// item blocks
+// -----------
 .item {
      background:#ccc;
      border:5px solid white;
@@ -96,17 +189,17 @@ a {
      background:white;
      padding:0.25em;
      position:relative;
-     color:rgba(55, 61, 61, 1.0000);
+     color:$charcoal;
      h3 {
          text-transform: uppercase;
          font-weight: 300;
          font-style: italic;
      }
      p {
-         color:rgba(55, 61, 61, 1.0000);
+         color:$charcoal;
      }
      a {
-         color:rgba(211, 114, 92, 1.0000);
+         color:$rust;
      }
 }
 
@@ -121,27 +214,106 @@ a {
      top:-40px;
      right:20px;
 }
-/* end item block */
-.a-little-more {
-    position:relative;
-    padding-top:5em;
-    font-size:1.25em;
-    line-height: 1.762em;
-    &::before {
-        background:url("../images/bw2.jpg");
-        background-size:cover;
-        margin:0 auto;
-        height:100px;
-        width:100px;
-        left:35%;
-        top:-1.15em;
 
-        border-radius:50px;
-        content:"";
-        position:absolute;
+// ## contact
+// ===================================================
+
+.contact-section {
+    background: $charcoal;
+    padding-top:3em;
+    padding-bottom:3em;
+    color:white;
+}
+
+.contact-header {
+    color:white;
+    text-align: center;
+    font-weight: 300;
+    font-size:3em;
+    position: relative;
+    span {
+        position:relative;
+        z-index: 100;
+        padding: 0 10px;
+        border-bottom:1px solid rgba(255, 255, 255, 0.9);
     }
 }
-/* larger screen styles */
+
+.ss-q-short,
+.ss-q-long {
+    width:98%;
+    padding:1em /* need if using icons below, 3em */;
+    border:none;
+    margin: 0.5em auto;
+    border-radius:4px;
+    color:black;
+    border-top: 1px solid rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(65, 73, 78, 0.43);
+    position:relative;
+    &:focus {
+        // background: #b1b8be url("../images/32x32/user.png") no-repeat 7px 50%;
+        background: #b1b8be;
+        color: white;
+        outline: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    }
+}
+
+.question-field {
+    min-height: 10em;
+}
+
+// styling placeholder text
+// thanks to http://stackoverflow.com/questions/2610497/change-an-inputs-html5-placeholder-color-with-css
+::-webkit-input-placeholder,::-moz-input-placeholder,::input-placeholder,.HardCodedInput {
+    color: #cbd0d5
+}
+
+.submit {
+    border:none;
+    padding:1em;
+    border-radius:4px;
+    color:white;
+    background:rgba(159, 159, 159, 1.0000);
+    @include transition-property(all);
+    @include transition-duration(.05s);
+    @include transition-timing-function(ease-in);
+    &:focus,
+    &:active {
+        background:darken(rgba(159, 159, 159, 1.0000), 20%);
+    }
+}
+
+.input-icon {
+display: inline-block;
+width: auto;
+height: 20px;
+min-width: 16px;
+padding: 4px 5px;
+font-size: 14px;
+font-weight: normal;
+line-height: 20px;
+text-align: center;
+text-shadow: 0 1px 0 #ffffff;
+background-color: #eeeeee;
+border: 1px solid #ccc;
+}
+
+// currently removed form site
+// .social-list {
+//     list-style: none;
+//     padding:0;
+// }
+// .social-list__item {
+//     font-size:1.5em;
+// }
+
+
+// ===================================================
+// ## 4. Styles for the Big Screen
+// ===================================================
+// using susy to kick out some styles for larger screens
+
 @include at-breakpoint($break) {
     .a-little-more {
         padding-top:0;
@@ -149,7 +321,7 @@ a {
         // @include pad(1,1);
         position:relative;
         h2 {
-            color:rgba(55, 61, 61, 1.0000);
+            color:$charcoal;
         }
         &::before {
             background:url("../images/bw2.jpg");
@@ -188,7 +360,7 @@ a {
             color:rgba(243, 243, 243, 0.74);
         }
         a {
-            color:rgba(211, 114, 92, 1.0000);
+            color:$rust;
         }
         position:absolute;
         top:0;
@@ -215,189 +387,4 @@ a {
   .social { @include span-columns(6 omega,$break); }
   // .theform { @include pad(1,3);}
 }
-
-
-.itsme {
-    
-}
-
-.ss-q-short,
-.ss-q-long {
-    width:98%;
-    padding:1em /* need if using icons below, 3em */;
-    border:none;
-    margin: 0.5em auto;
-    border-radius:4px;
-    color:black;
-    border-top: 1px solid rgba(0, 0, 0, 0.8);
-    border-bottom: 1px solid rgba(65, 73, 78, 0.43);
-    position:relative;
-    &:focus {
-        // background: #b1b8be url("../images/32x32/user.png") no-repeat 7px 50%;
-        background: #b1b8be;
-        color: white;
-        outline: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-    }
-}
-
-.question-field {
-    min-height: 10em;
-}
-/*
-If we want to use fancy icons or something:
- .name-field {   
-    background: white url("../images/user.png") no-repeat 7px 1em;
-}
-.email-field {
-    background: white url("../images/mail.png") no-repeat 7px 1em;
-}
-.question-field {
-    background: white url("../images/quill.png") no-repeat 7px 1em;
-    min-height: 10em;
-}
-
-.name-field,
-.email-field,
-.question-field {
-    background-size:28px;
-    &:focus {
-        background-color: #b1b8be;
-    }
-} */
-
-// styling placeholder text
-// thanks to http://stackoverflow.com/questions/2610497/change-an-inputs-html5-placeholder-color-with-css
-::-webkit-input-placeholder,::-moz-input-placeholder,::input-placeholder,.HardCodedInput {
-    color: #cbd0d5
-}
-
-.submit {
-    border:none;
-    padding:1em;
-    border-radius:4px;
-    color:white;
-    background:rgba(159, 159, 159, 1.0000);
-    @include transition-property(all);
-    @include transition-duration(.05s);
-    @include transition-timing-function(ease-in);
-    &:focus,
-    &:active {
-        background:darken(rgba(159, 159, 159, 1.0000), 20%);
-    }
-}
-
-.herewego {
-    background:white;
-    display:inline-block;
-    padding:1em;
-    margin-top:2em;
-    color:rgba(149, 186, 161, 1.0000);
-    font-size:1.75em;
-    text-decoration: none;
-    border-radius: 4px;
-    @include transition-property(all);
-    @include transition-duration(.2s);
-    @include transition-timing-function(ease-in);
-    &:hover {
-        background:darken(white, 10%);
-    }
-}
-
-
-
-.input-icon {
-display: inline-block;
-width: auto;
-height: 20px;
-min-width: 16px;
-padding: 4px 5px;
-font-size: 14px;
-font-weight: normal;
-line-height: 20px;
-text-align: center;
-text-shadow: 0 1px 0 #ffffff;
-background-color: #eeeeee;
-border: 1px solid #ccc;
-}
-
-.more-info__header {
-    color:rgba(55, 61, 61, 1.0000);
-    text-align: center;
-    font-weight: 300;
-    font-size:3em;
-    position:relative;
-
-    span {
-        position: relative;
-        z-index: 100;
-        padding: 0 10px;
-        border-bottom:1px solid rgba(55, 61, 61, 0.2);
-        // background:rgba(211, 114, 92, 1.0000);
-    }
-}
-.work-header {
-    color:white;
-    text-align: center;
-    font-weight: 300;
-    font-size:3em;
-    position:relative;
-    span {
-        position: relative;
-        z-index: 100;
-        padding: 0 10px;
-        border-bottom:1px solid rgba(55, 61, 61, 0.2);
-    }
-}
-
-// .work-header::after {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     left: 0;
-//     height: 0;
-//     width: 100%;
-//     border-bottom: 1px solid rgba(55, 61, 61, 0.2);
-//     overflow: hidden;
-//     z-index: 10;
-// }
-.work-description {
-    color:rgba(55, 61, 61, 1.0000);
-    text-align:center;
-    max-width:480px;
-    margin:2em auto;
-    position: relative;
-}
-
-.contact-header {
-    color:white;
-    text-align: center;
-    font-weight: 300;
-    font-size:3em;
-    position: relative;
-    span {
-        position:relative;
-        z-index: 100;
-        padding: 0 10px;
-        border-bottom:1px solid rgba(255, 255, 255, 0.9);
-    }
-}
-// .contact-header:after{
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     left: 0;
-//     height: 0;
-//     width: 100%;
-//     border-bottom: 1px solid rgba(242, 255, 248, 0.3);
-//     overflow: hidden;
-//     z-index: 10;
-// }
-
-.social-list {
-    list-style: none;
-    padding:0;
-}
-.social-list__item {
-    font-size:1.5em;
-}
+// end larger screen styles

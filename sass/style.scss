@@ -56,7 +56,9 @@ a {
 .intro-section { 
     background:$green;
     color:white;
-    padding:5em 0;
+    // padding:3em 0;
+    padding-top:1em;
+    padding-bottom:3em;
     text-align:center; 
     p {
         // padding:2em 0;
@@ -67,7 +69,8 @@ a {
     background:white;
     display:inline-block;
     padding:1em;
-    margin-top:2em;
+    margin-top:1em;
+    margin-bottom:2em;
     color:$green;
     font-size:1.75em;
     text-decoration: none;
@@ -178,7 +181,7 @@ a {
 }
 
 .item__image--landing-pages {
-    background-image:url('../images/work/landing-page.png');
+    background-image:url('../images/work/landing-page.jpg');
 }
 
 .item__image--facets {
@@ -315,6 +318,12 @@ border: 1px solid #ccc;
 // using susy to kick out some styles for larger screens
 
 @include at-breakpoint($break) {
+    .intro-section { 
+        padding:5em 0;
+    }
+    .herewego {
+        margin-top:1.5em;
+    }
     .a-little-more {
         padding-top:0;
         @include span-columns(10 omega,$break);

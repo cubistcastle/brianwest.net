@@ -829,11 +829,10 @@ If we want to use fancy icons or something:
   position: relative;
   z-index: 100;
   padding: 0 10px;
-  background: #d3725c;
   border-bottom: 1px solid rgba(55, 61, 61, 0.2);
 }
 
-/* line 365, ../sass/style.scss */
+/* line 364, ../sass/style.scss */
 .work-description {
   color: #373d3d;
   text-align: center;
@@ -842,7 +841,7 @@ If we want to use fancy icons or something:
   position: relative;
 }
 
-/* line 373, ../sass/style.scss */
+/* line 372, ../sass/style.scss */
 .contact-header {
   color: white;
   text-align: center;
@@ -850,22 +849,21 @@ If we want to use fancy icons or something:
   font-size: 3em;
   position: relative;
 }
-/* line 379, ../sass/style.scss */
+/* line 378, ../sass/style.scss */
 .contact-header span {
   position: relative;
   z-index: 100;
   padding: 0 10px;
-  background: #373d3d;
   border-bottom: 1px solid rgba(255, 255, 255, 0.9);
 }
 
-/* line 399, ../sass/style.scss */
+/* line 397, ../sass/style.scss */
 .social-list {
   list-style: none;
   padding: 0;
 }
 
-/* line 403, ../sass/style.scss */
+/* line 401, ../sass/style.scss */
 .social-list__item {
   font-size: 1.5em;
 }

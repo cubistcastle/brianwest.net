@@ -45,3 +45,6 @@ Thumbs.db
 # repos specific #
 ###################
 /experimental
+
+#other
+/deploy

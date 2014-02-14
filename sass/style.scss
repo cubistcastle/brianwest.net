@@ -13,17 +13,17 @@
 // just a few styling defaults for the page at large
 
 body {
-    font-family: "freight-sans-pro", "Arial", sans-serif;
-    font-weight: 300;
-    background:#cbd0d5;
+	font-family: "freight-sans-pro", "Arial", sans-serif;
+	font-weight: 300;
+	background:#cbd0d5;
 }
 
 img {
-    max-width:100%;
+	max-width:100%;
 }
 
 a {
-    color:$rust;
+	color:$rust;
 }
 
 // ===================================================
@@ -36,12 +36,12 @@ a {
 .more-info,
 .examples,
 .contact {
-    @include container;
-        // @include susy-grid-background;
-    @include at-breakpoint($break) {
-    @include set-container-width;
-        // @include susy-grid-background;
-    }
+	@include container;
+		// @include susy-grid-background;
+	@include at-breakpoint($break) {
+	@include set-container-width;
+		// @include susy-grid-background;
+	}
 }
 
 // ===================================================
@@ -54,239 +54,253 @@ a {
 // ===================================================
 
 .intro-section { 
-    background:$green;
-    color:white;
-    // padding:3em 0;
-    padding-top:1em;
-    padding-bottom:3em;
-    text-align:center; 
-    p {
-        // padding:2em 0;
-        font-size:2.5em;
-    }
+	background:$green;
+	color:white;
+	// padding:3em 0;
+	padding-top:1em;
+	padding-bottom:3em;
+	text-align:center; 
+	p {
+		// padding:2em 0;
+		font-size:2.5em;
+	}
 }
 .herewego {
-    background:white;
-    display:inline-block;
-    padding:1em;
-    margin-top:1em;
-    margin-bottom:2em;
-    color:$green;
-    font-size:1.75em;
-    text-decoration: none;
-    border-radius: 4px;
-    @include transition-property(all);
-    @include transition-duration(.2s);
-    @include transition-timing-function(ease-in);
-    &:hover {
-        background:darken(white, 10%);
-    }
+	background:white;
+	display:inline-block;
+	padding:1em;
+	margin-top:1em;
+	margin-bottom:2em;
+	color:$green;
+	font-size:1.75em;
+	text-decoration: none;
+	border-radius: 4px;
+	@include transition-property(all);
+	@include transition-duration(.2s);
+	@include transition-timing-function(ease-in);
+	&:hover {
+		background:darken(white, 10%);
+	}
 }
 
 // ## more information
 // ===================================================
 
 .more-info {
-    padding-bottom: 3em;
+	padding-bottom: 3em;
 }
 
 .more-info-section {
-    background:$cream;
-    padding:3em 0;
+	background:$cream;
+	padding:3em 0;
 }
 
 .a-little-more {
-    position:relative;
-    padding-top:5em;
-    font-size:1.25em;
-    line-height: 1.762em;
-    &::before {
-        background:url("../images/bw2.jpg");
-        background-size:cover;
-        margin:0 auto;
-        height:100px;
-        width:100px;
-        margin-left:-50px;
-        left:50%;
-        top:-1.15em;
+	position:relative;
+	padding-top:5em;
+	font-size:1.25em;
+	line-height: 1.762em;
+	&::before {
+		background:url("../images/bw2.jpg");
+		background-size:cover;
+		margin:0 auto;
+		height:100px;
+		width:100px;
+		margin-left:-50px;
+		left:50%;
+		top:-1.15em;
 
-        border-radius:50px;
-        content:"";
-        position:absolute;
-    }
+		border-radius:50px;
+		content:"";
+		position:absolute;
+	}
 }
 
 .more-info__header {
-    color:$charcoal;
-    text-align: center;
-    font-weight: 300;
-    font-size:3em;
-    position:relative;
+	color:$charcoal;
+	text-align: center;
+	font-weight: 300;
+	font-size:3em;
+	position:relative;
 
-    span {
-        position: relative;
-        z-index: 100;
-        padding: 0 10px;
-        border-bottom:1px solid rgba(55, 61, 61, 0.2);
-        // background:$rust;
-    }
+	span {
+		position: relative;
+		z-index: 100;
+		padding: 0 10px;
+		border-bottom:1px solid rgba(55, 61, 61, 0.2);
+		// background:$rust;
+	}
 }
 
 // ## work examples
 // ===================================================
 
 .examples-section {
-    background:$rust;
-    padding-top:3em;
-    padding-bottom:3em;
-    color:white;
+	background:$rust;
+	padding-top:3em;
+	padding-bottom:3em;
+	color:white;
 }
 
 .work-header {
-    color:white;
-    text-align: center;
-    font-weight: 300;
-    font-size:3em;
-    position:relative;
-    span {
-        position: relative;
-        z-index: 100;
-        padding: 0 10px;
-        border-bottom:1px solid rgba(55, 61, 61, 0.2);
-    }
+	color:white;
+	text-align: center;
+	font-weight: 300;
+	font-size:3em;
+	position:relative;
+	span {
+		position: relative;
+		z-index: 100;
+		padding: 0 10px;
+		border-bottom:1px solid rgba(55, 61, 61, 0.2);
+	}
 }
 
 .work-description {
-    color:$charcoal;
-    text-align:center;
-    max-width:480px;
-    margin:2em auto;
-    position: relative;
+	color:$charcoal;
+	text-align:center;
+	max-width:480px;
+	margin:2em auto;
+	position: relative;
 }
 
 // -----------
 // item blocks
 // -----------
 .item {
-     background:#ccc;
-     border:5px solid white;
-     margin-bottom:2em;
+	 background:#ccc;
+	 border:5px solid white;
+	 margin-bottom:2em;
 }
 .item__image {
-     // background:url("http://www.colum.edu/Admissions/me/images/mpc1.jpg");
-     background-size:cover;
-     height:300px;
+	 // background:url("http://www.colum.edu/Admissions/me/images/mpc1.jpg");
+	 background-size:cover;
+	 height:300px;
 }
 .item__image--open-house {
-    background-image:url('../images/work/openhouse-f-2013.png');
+	background-image:url('../images/work/openhouse-f-2013.png');
 }
 
 .item__image--landing-pages {
-    background-image:url('../images/work/landing-page.jpg');
+	background-image:url('../images/work/landing-page.jpg');
 }
 
 .item__image--facets {
-    background-image:url('../images/work/record-a-poem.png');
+	background-image:url('../images/work/record-a-poem.png');
+}
+
+.item__image--vets {
+	background-image:url('../images/work/vetpage-sm.jpg');
+}
+
+.item__image--lstreet {
+	background-image:url('../images/work/lstreet-sm.jpg');
+}
+.item__image--ignore {
+	background-image:url('../images/work/themoreyouignoreme-sm.jpg');
+}
+.item__image--vist-page {
+	background-image:url('../images/work/ccc-visit-sm.jpg');
 }
 
 .item__description {
-     background:white;
-     padding:0.25em;
-     position:relative;
-     color:$charcoal;
-     h3 {
-         text-transform: uppercase;
-         font-weight: 300;
-         font-style: italic;
-     }
-     p {
-         color:$charcoal;
-     }
-     a {
-         color:$rust;
-     }
+	 background:white;
+	 padding:0.25em;
+	 position:relative;
+	 color:$charcoal;
+	 h3 {
+		 text-transform: uppercase;
+		 font-weight: 300;
+		 font-style: italic;
+	 }
+	 p {
+		 color:$charcoal;
+	 }
+	 a {
+		 color:$rust;
+	 }
 }
 
 .item__description::before {
-     content:"";
-     position:absolute;
-     border-color: transparent transparent white transparent;
-     border-style:solid;
-     border-width:20px;
-     width:0;
-     height:0;
-     top:-40px;
-     right:20px;
+	 content:"";
+	 position:absolute;
+	 border-color: transparent transparent white transparent;
+	 border-style:solid;
+	 border-width:20px;
+	 width:0;
+	 height:0;
+	 top:-40px;
+	 right:20px;
 }
 
 // ## contact
 // ===================================================
 
 .contact-section {
-    background: $charcoal;
-    padding-top:3em;
-    padding-bottom:3em;
-    color:white;
+	background: $charcoal;
+	padding-top:3em;
+	padding-bottom:3em;
+	color:white;
 }
 
 .contact-header {
-    color:white;
-    text-align: center;
-    font-weight: 300;
-    font-size:3em;
-    position: relative;
-    span {
-        position:relative;
-        z-index: 100;
-        padding: 0 10px;
-        border-bottom:1px solid rgba(255, 255, 255, 0.9);
-    }
+	color:white;
+	text-align: center;
+	font-weight: 300;
+	font-size:3em;
+	position: relative;
+	span {
+		position:relative;
+		z-index: 100;
+		padding: 0 10px;
+		border-bottom:1px solid rgba(255, 255, 255, 0.9);
+	}
 }
 
 .ss-q-short,
 .ss-q-long {
-    width:98%;
-    padding:1em /* need if using icons below, 3em */;
-    border:none;
-    margin: 0.5em auto;
-    border-radius:4px;
-    color:black;
-    border-top: 1px solid rgba(0, 0, 0, 0.8);
-    border-bottom: 1px solid rgba(65, 73, 78, 0.43);
-    position:relative;
-    &:focus {
-        // background: #b1b8be url("../images/32x32/user.png") no-repeat 7px 50%;
-        background: #b1b8be;
-        color: white;
-        outline: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-    }
+	width:98%;
+	padding:1em /* need if using icons below, 3em */;
+	border:none;
+	margin: 0.5em auto;
+	border-radius:4px;
+	color:black;
+	border-top: 1px solid rgba(0, 0, 0, 0.8);
+	border-bottom: 1px solid rgba(65, 73, 78, 0.43);
+	position:relative;
+	&:focus {
+		// background: #b1b8be url("../images/32x32/user.png") no-repeat 7px 50%;
+		background: #b1b8be;
+		color: white;
+		outline: none;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+	}
 }
 
 .question-field {
-    min-height: 10em;
+	min-height: 10em;
 }
 
 // styling placeholder text
 // thanks to http://stackoverflow.com/questions/2610497/change-an-inputs-html5-placeholder-color-with-css
 ::-webkit-input-placeholder,::-moz-input-placeholder,::input-placeholder,.HardCodedInput {
-    color: #cbd0d5
+	color: #cbd0d5
 }
 
 .submit {
-    border:none;
-    padding:1em;
-    border-radius:4px;
-    color:white;
-    background:rgba(159, 159, 159, 1.0000);
-    width:98%;
-    @include transition-property(all);
-    @include transition-duration(.05s);
-    @include transition-timing-function(ease-in);
-    &:focus,
-    &:active {
-        background:darken(rgba(159, 159, 159, 1.0000), 20%);
-    }
+	border:none;
+	padding:1em;
+	border-radius:4px;
+	color:white;
+	background:rgba(159, 159, 159, 1.0000);
+	width:98%;
+	@include transition-property(all);
+	@include transition-duration(.05s);
+	@include transition-timing-function(ease-in);
+	&:focus,
+	&:active {
+		background:darken(rgba(159, 159, 159, 1.0000), 20%);
+	}
 }
 
 .input-icon {
@@ -320,82 +334,98 @@ border: 1px solid #ccc;
 // using susy to kick out some styles for larger screens
 
 @include at-breakpoint($break) {
-    .intro-section { 
-        padding:5em 0;
-    }
-    .herewego {
-        margin-top:1.5em;
-    }
-    .a-little-more {
-        padding-top:0;
-        @include span-columns(10 omega,$break);
-        // @include pad(1,1);
-        position:relative;
-        h2 {
-            color:$charcoal;
-        }
-        &::before {
-            background:url("../images/bw2.jpg");
-            background-size:cover;
-            margin:0 auto;
-            height:100px;
-            width:100px;
-            left:-150px;
-            top:25%;
-            border-radius:50px;
-            content:"";
-            position:absolute;
-        }
-    }
-    .item { 
-        @include span-columns(4,$break); 
-        position:relative;
-        height:300px;
-    }
-    // since we are using three columns, set the last one(s) to inherit the omega styles
-    .item:nth-of-type(3) { @include span-columns(4 omega,$break); }
-    .item__image {
-     background-size:cover;
-     height:100%;
-    }
-    .item__description {
-        font-family: "freight-sans-pro", sans;
-        padding:0 1em;
-        h3 {
-            text-transform: uppercase;
-            color:white;
-            font-weight: 300;
-            font-style: italic;
-        }
-        p {
-            color:rgba(243, 243, 243, 0.74);
-        }
-        a {
-            color:$rust;
-        }
-        position:absolute;
-        top:0;
-        height: 100%;
-        opacity:0;
-        background:rgba(55, 61, 61, 0.98);
-        @include transition-property(opacity);
-        @include transition-duration(.2s);
-        @include transition-timing-function(ease-in-out);
-        &:hover {
-            opacity:1;
-        }
-    }
-    .item__description::before {
-        display:none;
-    }
-    .formblock { 
-        @include span-columns(6,$break);
-        // @include pad(1,1);
-        @include pre(3);
-        // @include post(1);
-        // background:#ccc; 
-    }
+	.intro-section { 
+		padding:5em 0;
+	}
+	.herewego {
+		margin-top:1.5em;
+	}
+	.a-little-more {
+		padding-top:0;
+		@include span-columns(10 omega,$break);
+		// @include pad(1,1);
+		position:relative;
+		h2 {
+			color:$charcoal;
+		}
+		&::before {
+			background:url("../images/bw2.jpg");
+			background-size:cover;
+			margin:0 auto;
+			height:100px;
+			width:100px;
+			left:-150px;
+			top:25%;
+			border-radius:50px;
+			content:"";
+			position:absolute;
+		}
+	}
+	.item { 
+		@include span-columns(4,$break); 
+		position:relative;
+		height:300px;
+	}
+	// since we are using three columns, set the last one(s) to inherit the omega styles
+	.item:nth-of-type(3n+1) { @include span-columns(4 omega,$break); }
+	.item__image {
+	 background-size:cover;
+	 height:100%;
+	}
+	.item__description {
+		font-family: "freight-sans-pro", sans;
+		padding:0 1em;
+		h3 {
+			text-transform: uppercase;
+			color:white;
+			font-weight: 300;
+			font-style: italic;
+		}
+		p {
+			color:rgba(243, 243, 243, 0.74);
+		}
+		a {
+			color:$rust;
+		}
+		position:absolute;
+		top:0;
+		height: 100%;
+		opacity:0;
+		background:rgba(55, 61, 61, 0.98);
+		@include transition-property(opacity);
+		@include transition-duration(.2s);
+		@include transition-timing-function(ease-in-out);
+		&:hover {
+			opacity:1;
+		}
+	}
+	.item__description::before {
+		display:none;
+	}
+	.formblock { 
+		@include span-columns(6,$break);
+		// @include pad(1,1);
+		@include pre(3);
+		// @include post(1);
+		// background:#ccc; 
+	}
   .social { @include span-columns(6 omega,$break); }
   // .theform { @include pad(1,3);}
 }
 // end larger screen styles
+
+/* examples pages */
+.large-example {
+	border: 6px solid rgba(255, 255, 255, 0.63);
+	margin:0 auto;
+	display: block;
+}
+.backlink {
+	color: rgba(58, 58, 58, 0.66);
+}
+
+.back-head-link {
+	color: #FFF;
+	text-decoration: none;
+	border-bottom: 2px solid #FFF;
+}
